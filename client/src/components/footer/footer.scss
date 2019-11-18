@@ -1,0 +1,20 @@
+.footer-adjustment {
+  background: #343a40 !important;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .footer-adjustment {
+    background: #343a40 !important;
+    width: 100%;
+    color: white;
+    text-align: center;
+    // min-height: 100vh;
+  }
+}
+
+.fab {
+  height: 30px;
+}
