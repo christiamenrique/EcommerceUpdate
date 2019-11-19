@@ -43,7 +43,7 @@ module.exports = {
 		})
 	},
 
-	// the login route
+	// the login route ?
 	authenticate: (req, res) => {
 		// check if the user exists
 		User.findOne({email: req.body.email}, (err, user) => {

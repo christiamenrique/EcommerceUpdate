@@ -17,7 +17,7 @@ function Product(props) {
         <div className="text-content">
           <h2>{product.product_name}</h2>
           <h3 className="price-modify">${product.price}</h3>
-          <p>{product.products_description}</p>
+          <p>{product.product_description}</p>
           <button type="button" className="btn btn-success">Buy Now</button>
         </div>
       </div>

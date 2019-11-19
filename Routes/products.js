@@ -16,15 +16,6 @@ router.get('/:type/:price', async (req, res) => {
   res.json(products)
  
 })
-// router.get('/', (req, res) => {
-//   Products.find({}, (err, data) => {
-//       if(err) {
-//           res.send(err)
-//       } else {
-//           res.json(data)
-//       }
-//   })
-// })
 
 router.get('/filter/:id', async (req, res) => {
   const products = await Products.find({$product_name})

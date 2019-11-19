@@ -3,7 +3,6 @@ import Product from "./components/product/Product";
 import Contact from "./components/contact-info/Contact";
 import Footer from "./components/footer/Footer";
 import Wrapper from "./components/Wrapper/index";
-import AfterSubmit from "./components/after-submit/AfterSubmit";
 // import products from "./products.json";
 import "./App.scss";
 import Navegation from "./components/nav/Nav";
@@ -13,6 +12,7 @@ import httpClient from './components/user/httpClient'
 import LogIn from './components/user/LogIn'
 import LogOut from './components/user/LogOut'
 import SignUp from './components/user/SignUp'
+// import Add from './components/product/addProducts'
 // import axios from "axios";
 
 
@@ -87,6 +87,7 @@ class App extends React.Component {
           <React.Fragment>
             <Navegation currentUser={this.state.currentUser}/>
             <Switch>
+            {/* <Route path="/add" render={() => <Add />} /> */}
               <Route path="/login" render={(props) => {
                 return <LogIn {...props} onLoginSuccess={this.onLoginSuccess.bind(this)} />
               }} />
@@ -96,10 +97,9 @@ class App extends React.Component {
               <Route path="/signup" render={(props) => {
                 return <SignUp {...props} onSignUpSuccess={this.onLoginSuccess.bind(this)} />
               }} />
+              <Route path="/" render={() => <MainPage />} />
               <Route path="/contact" render={() => <Contact />} />
               <Route path="/products" render={() => <Product priceChange={ this.priceChange } dropboxChange={ this.dropboxChange } products={this.state.products} />} />
-              <Route path="/" render={() => <MainPage />} />
-              {/* <Route path="/contacts/add" render={() => <AfterSubmit />} /> */}
             </Switch>
             <Footer />
           </React.Fragment>

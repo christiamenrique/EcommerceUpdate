@@ -1,68 +1,128 @@
-import React from "react";
 import "./contact.scss";
 import Jumbal from "./Jumbotron";
+import React, { Component } from 'react';
+import axios from 'axios';
 
 //form validation
-function Contact(props) {
-  const formValidation = () => {
-    const errorFields = [];
-    const fullName = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phoneNumber = document.getElementById("phone").value;
-    const comments = document.getElementById("comments").value;
-    //if is not field it will alert that it needs a name, email, phone, comments
-    if (fullName === '') {
-      errorFields.push('name');
-    }
+export default class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.onChangeFullName = this.onChangeFullName.bind(this);
+    this.onChangePhoneNumber = this.onChangePhoneNumber.bind(this);
+    this.onChangeEmail = this.onChangeEmail.bind(this);
+    this.onChangeComments = this.onChangeComments.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
 
-    if (email === '') {
-      errorFields.push('email');
-    }
-
-    if (phoneNumber === '') {
-      errorFields.push('phone');
-    }
-
-    if (comments === '') {
-      errorFields.push('comments')
-    }
-    if (errorFields.length) {
-      alert(`Please fill out the following fields: ${errorFields.join(', ')}`);
-    } else {
-      alert(`Thank you ${fullName} we have recieve your message`);
+    this.state = {
+      fullName : "",
+      phoneNumber: "",
+      email: "",
+      comments: "",
     }
   }
+
+  onChangeFullName(e) {
+    this.setState({
+      fullName: e.target.value
+    })
+  }
+  onChangePhoneNumber(e) {
+    this.setState({
+      phoneNumber: e.target.value
+    })
+  }
+  onChangeEmail(e) {
+    this.setState({
+      email: e.target.value
+    })
+  }
+  onChangeComments(e) {
+    this.setState({
+      comments: e.target.value
+    })
+  }
+
+    onSubmit(e) {
+    e.preventDefault();
+
+    const contacts = {
+      fullName: this.state.fullName,
+      phoneNumber: this.state.phoneNumber,
+      email: this.state.email,
+      comments: this.state.comments,
+    }
+
+    console.log(contacts)
+
+    axios.post('/contacts/add', contacts)
+      .then(res => console.log(res.data));
+
+    this.setState({
+      fullName : "",
+      phoneNumber:"",
+      email:"",
+      comments: "",
+    })
+}
+  
 //form
+render() {
   return (
     <React.Fragment>
       <Jumbal />
-      <form className="cmxform form-dislpay" id="contactForm" method="post" action="/contacts/add">
+      <form onSubmit={this.onSubmit} className="cmxform form-dislpay">
         <h2>Provide your personal info (won't be published) and add a comment with your feedback</h2>
         <fieldset>
           <div className="form-spacing">
             <label htmlFor="name">Full Name <mark className="requiredInput">*</mark></label>
-            <input id="name" minLength="2" name="fullName" type="text" required />
+            <input 
+            id="name" 
+            minLength="2" 
+            name="fullName" 
+            type="text" required
+            value={this.state.fullName}
+            onChange={this.onChangeFullName} 
+            />
           </div>
+          
           <div className="form-spacing">
             <label htmlFor="email">Email <mark className="requiredInput">*</mark></label>
-            <input id="email" type="email" name="email" required />
+            <input 
+            id="email" 
+            type="text" 
+            name="email" 
+            required
+            value={this.state.email}
+            onChange={this.onChangeEmail}
+             />
           </div>
           <div className="form-spacing">
             <label htmlFor="phone">Phone Number <mark className="requiredInput">*</mark></label>
-            <input type="number" id="phone" name="phoneNumber" required />
+            <input 
+            type="number" 
+            id="phone" 
+            name="phoneNumber" 
+            required 
+            value={this.state.phoneNumber}
+            onChange={this.onChangePhoneNumber}/>
           </div>
           <div className="form-spacing">
             <label htmlFor="comment">Your comment <mark className="requiredInput">*</mark></label>
-            <textarea className="form-comment" id="comments" name="comments" required></textarea>
+            <textarea 
+            className="form-comment" 
+            id="comments" 
+            name="comments" 
+            required
+            value={this.state.comments}
+            onChange={this.onChangeComments}>
+            </textarea>
           </div>
           <div className="form-spacing">
-            <button onClick={formValidation} type="submit" className="btn btn-primary mb-2">submit</button>
+            <button type="submit" value="Create contact" className="btn btn-primary mb-2">submit</button>
           </div>
         </fieldset>
       </form>
     </React.Fragment>
   )
 }
-
-
-export default Contact;
+    }

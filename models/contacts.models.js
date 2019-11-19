@@ -12,10 +12,10 @@ const contactSchema = new Schema({
   },
 
   phoneNumber: {
-    type: String,
+    type: Number,
     trim: true,
     unique: true,
-    validate: [/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/, "Must be only numbers"]
+    // validate: [/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/, "Must be only numbers"]
   },
 
   email: {
@@ -27,7 +27,6 @@ const contactSchema = new Schema({
   comments: {
     type: String,
     trim: true,
-    // minlength: 3,
   }
 
   });
