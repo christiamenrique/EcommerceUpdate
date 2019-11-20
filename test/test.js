@@ -36,52 +36,11 @@ describe('Tests for /products api endpoint', () => {
 
     it("/producttypefilter/:query should send back 200 status code", (done) => {
         chai.request(app)
-            .get('/producttypefilter/:query')
+            .get('/api/users')
             .end((error, response) => {
                 // console.log('response - ', response.body)
                 response.should.have.status(200);
                 done();
             })
     })
-
-    it("/productpricefilter/less should send back 200 status code", (done) => {
-        chai.request(app)
-            .get('/productpricefilter/less')
-            .end((error, response) => {
-                // console.log('response - ', response.body)
-                response.should.have.status(200);
-                done();
-            })
-    })
-
-    it("/productpricefilter/more should send back 200 status code", (done) => {
-        chai.request(app)
-            .get('/productpricefilter/more')
-            .end((error, response) => {
-                // console.log('response - ', response.body)
-                response.should.have.status(200);
-                done();
-            })
-    })
-
-    // add new contact test
-    // it("should be able to post new contact", (done) => {
-    //     chai.request(app)
-    //         .post('/contacts/add')
-    //         .set('content-type', 'application/json')
-    //         .send({
-    //             fullName: 'Roby Dom',
-    //             email: 'rubydom@gmail.com',
-    //             phoneNumber:'704-306-2980',
-    //             comments: 'It work.'
-    //         })
-    //         .end(function (error, response, body) {
-    //             if (error) {
-    //                 done(error);
-    //             } else {
-    //                 done();
-    //             }
-    //         });
-
-    // });
 });
