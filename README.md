@@ -14,15 +14,6 @@ On this page, I am selling electronic products(tv, drones, speakers, etc..). I a
 * I also included the automated test which test the api's. The command to run this test is npm test.
 * To run the test mocha and chai are required. The command is npm install mocha, npm install chai.
 
-# Most used NPM commands 
-* npm init -- Initialize json packages
-* npm install -- Install the node modules
-* npm install mocha -- Install mocha
-* npm install chai -- Install chai
-* npm install express -- Install express needed for the server
-* npm run start or npm start -- Start application
-* npm test -- test the api's 
-
 # Features:
 * Signup and Login auth process, displaying ‘admin page’
 * UseS bcrypt encryption protocol and JWT
@@ -43,6 +34,12 @@ On this page, I am selling electronic products(tv, drones, speakers, etc..). I a
 
 # Demo
 * https://ecommerce-original.herokuapp.com/login
+
+# Author
+* Christiam Hernandez
+
+# License
+* This project is licensed under the MIT License - see the LICENSE.md file for details
 
 
 
