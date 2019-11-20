@@ -18,7 +18,7 @@ let uri = ""
 
 
 const app = express();
-const PORT = process.env.PORT || 3500;
+const PORT = process.env.PORT || 5050;
 
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'morgan.log'), { flags: 'a' })
@@ -64,6 +64,12 @@ app.use('/api/users', usersRoutes)
 app.use('/contacts', contactRouter);
 app.use('/products',productsRouter);
 // app.use('/signUp', signUpRouter);
+
+// Creating live connection to reactjs app
+// Define any API routes before this runs
+app.get("*", function(req, res) {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 //Launch Server
 app.listen(PORT, function () {
