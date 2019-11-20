@@ -97,9 +97,9 @@ class App extends React.Component {
               <Route path="/signup" render={(props) => {
                 return <SignUp {...props} onSignUpSuccess={this.onLoginSuccess.bind(this)} />
               }} />
-              <Route path="/" render={() => <MainPage />} />
               <Route path="/contact" render={() => <Contact />} />
               <Route path="/products" render={() => <Product priceChange={ this.priceChange } dropboxChange={ this.dropboxChange } products={this.state.products} />} />
+              <Route path="/" render={() => <MainPage />} />
             </Switch>
             <Footer />
           </React.Fragment>
