@@ -52,7 +52,7 @@ console.log("MongoDB connection is live");
 })
 
 // api
-const usersRoutes = require('./routes/User')
+const usersRoutes = require('./Routes/User')
 const contactRouter = require('./Routes/contact');
 const productsRouter = require('./Routes/products');
 // const signUpRouter = require('./Routes/signUp');
