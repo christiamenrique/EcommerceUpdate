@@ -41,7 +41,7 @@ class App extends React.Component {
 
   componentDidMount() {
     const { type, price } = this.state
-    fetch(`/products/${type}/${price ? "acsend" : "descend"}`)
+    fetch(`/api/products/${type}/${price ? "acsend" : "descend"}`)
       .then(response => response.json())
       .then(data => {
         this.setState({
@@ -53,7 +53,7 @@ class App extends React.Component {
   componentDidUpdate(prevProps, prevState,){
     if(this.state.type !== prevState.type || this.state.price !== prevState.price){
       const { type, price } = this.state
-      fetch(`/products/${type}/${price ? "acsend" : "descend"}`)
+      fetch(`/api/products/${type}/${price ? "acsend" : "descend"}`)
         .then(response => response.json())
         .then(data => {
           this.setState({

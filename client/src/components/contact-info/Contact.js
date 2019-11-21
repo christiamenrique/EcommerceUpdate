@@ -54,7 +54,7 @@ export default class Contact extends Component {
 
     console.log(contacts)
 
-    axios.post('/contacts/add', contacts)
+    axios.post('/api/contacts/add', contacts)
       .then(res => console.log(res.data));
 
     this.setState({

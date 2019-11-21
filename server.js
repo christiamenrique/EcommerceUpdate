@@ -61,9 +61,8 @@ app.get('/api', (req, res) => {
 	res.json({message: "API root"})
 })
 app.use('/api/users', usersRoutes)
-app.use('/contacts', contactRouter);
-app.use('/products',productsRouter);
-// app.use('/signUp', signUpRouter);
+app.use('/api/contacts', contactRouter);
+app.use('/api/products',productsRouter);
 
 // Creating live connection to reactjs app
 // Define any API routes before this runs
