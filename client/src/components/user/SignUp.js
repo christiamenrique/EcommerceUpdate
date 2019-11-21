@@ -63,7 +63,7 @@ class SignUp extends React.Component {
 					<input type="text" placeholder="Name" id="Name" name="name" value={name} />
 					<input type="text" placeholder="Email" id="Email" name="email" value={email} />
 					<input type="password" placeholder="Password" id="Password" name="password" value={password} />
-					<button onClick={this.inputValidation} className="btn btn-primary">Sign Up</button>
+					<button className="btn btn-primary">Sign Up</button>
 				</form>
 			</div>
 		)
