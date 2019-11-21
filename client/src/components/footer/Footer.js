@@ -3,8 +3,9 @@ import "./footer.scss";
 
 function Footer(props) {
     return (
-        <footer className="footer-adjustment">&copy;
-            <p>The Best Electronic.</p>
+        <footer className="footer-adjustment">
+        <div className="footerContext">
+        &copy; <p>The Best Electronic.</p>
             <div className="col-md-12">
                 <ul className="list-inline">
                     <li className="list-inline-item"><a href="https://www.facebook.com/"><i className="fab fa-facebook"></i></a></li>
@@ -13,6 +14,7 @@ function Footer(props) {
                     <li className="list-inline-item"><a href="https://www.pinterest.com/"><i className="fab fa-pinterest-p"></i></a></li>
                     <li className="list-inline-item"><a href="https://support.google.com/plus/?hl=en#topic=9259565"><i className="fab fa-google-plus"></i></a></li>
                 </ul>
+            </div>
             </div>
         </footer>
     );

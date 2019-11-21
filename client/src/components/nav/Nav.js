@@ -20,9 +20,6 @@ function Navegation(props) {
                 {props.currentUser
 				? (
 					<ul className="navbar-nav header__nav-list">
-                           <li className="nav-item" data-target="#navbarSupportedContent">
-						<Link to="/logout" className="header__nav-button btn">Log Out</Link>
-                        </li>
                         <li className="nav-item" data-target="#navbarSupportedContent">
 						<Link to="/" className="header__nav-button btn">Home</Link>
                         </li>
@@ -31,6 +28,9 @@ function Navegation(props) {
                         </li>
                         <li className="nav-item" data-target="#navbarSupportedContent">
                         <Link to="/contact" className="header__nav-button btn">Contact</Link>
+                        </li>
+                        <li className="nav-item" data-target="#navbarSupportedContent">
+						<Link to="/logout" className="header__nav-button btn">Log Out</Link>
                         </li>
 					</ul>
 				)

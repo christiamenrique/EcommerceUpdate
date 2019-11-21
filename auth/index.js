@@ -19,7 +19,7 @@ function verifyToken(req, res, next) {
 	// grab token from either headers, req.body, or query string
 	const token = req.get('token') || req.body.token || req.query.token
 	// if no token present, deny access
-	if(!token) return res.json({success: false, message: "No token provided"})
+	if(!token) return res.json({success: false, message: "No token provided. You don't have access to this area"})
 	// otherwise, try to verify token
 	jwt.verify(token, JWT_SECRET, (err, decodedData) => {
 		// if problem with token verification, deny access

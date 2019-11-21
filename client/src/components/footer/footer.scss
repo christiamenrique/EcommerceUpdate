@@ -5,16 +5,24 @@
   text-align: center;
 }
 
-@media (max-width: 400px) {
+.fab {
+  height: 30px;
+}
+
+@media (max-width: 1024px) {
   .footer-adjustment {
-    background: #343a40 !important;
-    width: 100%;
-    color: white;
-    text-align: center;
-    // min-height: 100vh;
+    min-height: 10vh;
+  }
+  .footerContext {
+    margin-top: 350px;
   }
 }
 
-.fab {
-  height: 30px;
+@media (max-width: 609px) {
+  .footer-adjustment {
+    min-height: 30vh;
+  }
+  .footerContext {
+    margin-top: 70px;
+  }
 }
