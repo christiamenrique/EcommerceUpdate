@@ -68,7 +68,7 @@
 
 //     console.log(products)
 
-//     axios.post('/products/add', products)
+//     axios.post('/api/products/add', products)
 //       .then(res => console.log(res.data));
 
 //     this.setState({

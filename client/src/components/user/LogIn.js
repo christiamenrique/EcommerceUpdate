@@ -4,7 +4,7 @@ import './logIn.scss';
 
 class LogIn extends React.Component {
 	state = {
-		fields: { email: '', password: ''}
+		fields: { email: '', password: '' }
 	}
 
 	onInputChange(evt) {
@@ -20,24 +20,38 @@ class LogIn extends React.Component {
 		evt.preventDefault()
 		httpClient.logIn(this.state.fields).then(user => {
 			this.setState({ fields: { email: '', password: '' } })
-			if(user) {
+			if (user) {
 				this.props.onLoginSuccess(user)
 				this.props.history.push('/')
 			}
 		})
 	}
-	
+
 	render() {
 		const { email, password } = this.state.fields
 		return (
 			<div className='LogIn'>
-						<h1>Log In</h1>
-						<form onChange={this.onInputChange.bind(this)} onSubmit={this.onFormSubmit.bind(this)}>
-							<input type="text" placeholder="Email" name="email" value={email} />
-							<input type="password" placeholder="Password" name="password" value={password} />
-							<button className="btn btn-primary">Log In</button>
-						</form>
-					</div>
+				<h1>Log In</h1>
+				<form onChange={this.onInputChange.bind(this)} onSubmit={this.onFormSubmit.bind(this)}>
+					<input
+						type="text"
+						required
+						placeholder="Email"
+						name="email"
+						value={email}
+					/>
+
+					<input
+						type="password"
+						required
+						placeholder="Password"
+						name="password"
+						value={password}
+					/>
+
+					<button className="btn btn-primary">Log In</button>
+				</form>
+			</div>
 		)
 	}
 }
