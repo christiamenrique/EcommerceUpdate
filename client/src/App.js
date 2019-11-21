@@ -25,7 +25,7 @@ class App extends React.Component {
       currentUser: httpClient.getCurrentUser(),
       products: [],
       type: "null",
-      price: true
+      price: true,
     }
   }
 
@@ -63,7 +63,6 @@ class App extends React.Component {
     }
   }
 
-
   // dropBox filter
   dropboxChange = (event) => {
     this.setState({
@@ -80,7 +79,7 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.price)
+    console.log(this.state.currentUser)
     return (
       <Wrapper>
         <Router>
@@ -110,7 +109,7 @@ class App extends React.Component {
               }} />
               <Route path="/" render={() => {
                 return this.state.currentUser
-                ? <MainPage />
+                ? <MainPage currentUser={this.state.currentUser} />
                 : <Redirect to="/login" />
               }} />
 

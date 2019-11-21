@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
 import "./nav.scss";
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router-dom';
 
 function Navegation(props) {
+
     return (
         <nav className="navbar navbar-expand-lg navbar-dark">
             <div className="header__wrapper navbar-brand">
@@ -51,5 +52,6 @@ function Navegation(props) {
 
     );
 }
+// }
 
 export default withRouter(Navegation);

@@ -13,7 +13,7 @@ class Main extends React.Component {
                 <div className="carousel-inner">
                     <div className="carousel-item slide-1 active">
                         <div className="imgText">
-                            <h2>Welcome to The Best Electronic Store</h2>
+                            <h2>Welcome to The Best Electronic Store, {this.props.currentUser.name}</h2>
                             <p>We dedicate our lives to making sure that everyone is up to date with the newest technology at the best prices.</p>
                         </div>
                     </div>
