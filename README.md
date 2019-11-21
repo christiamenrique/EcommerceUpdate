@@ -16,7 +16,7 @@ On this page, I am selling electronic products(tv, drones, speakers, etc..). I a
 
 # Features:
 * Signup and Login auth process, displaying ‘admin page’
-* UseS bcrypt encryption protocol and JWT
+* Uses bcrypt encryption protocol and JWT
 * Nav bar with a logo
 * Footer with links to my page and copyright
 * Main page with a carousel slide
