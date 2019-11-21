@@ -6,7 +6,7 @@ import Wrapper from "./components/Wrapper/index";
 // import products from "./products.json";
 import "./App.scss";
 import Navegation from "./components/nav/Nav";
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import MainPage from "./components/main-page/MainPage";
 import httpClient from './components/user/httpClient'
 import LogIn from './components/user/LogIn'
@@ -97,9 +97,24 @@ class App extends React.Component {
               <Route path="/signup" render={(props) => {
                 return <SignUp {...props} onSignUpSuccess={this.onLoginSuccess.bind(this)} />
               }} />
-              <Route path="/contact" render={() => <Contact />} />
-              <Route path="/products" render={() => <Product priceChange={ this.priceChange } dropboxChange={ this.dropboxChange } products={this.state.products} />} />
-              <Route path="/" render={() => <MainPage />} />
+              <Route path="/contact" render={() => {
+                return this.state.currentUser
+                ? <Contact />
+                : <Redirect to="/login" />
+              }} />
+
+              <Route path="/products" render={() => {
+                return this.state.currentUser
+                ? <Product priceChange={ this.priceChange } dropboxChange={ this.dropboxChange } products={this.state.products} />
+                : <Redirect to="/login" />
+              }} />
+              <Route path="/" render={() => {
+                return this.state.currentUser
+                ? <MainPage />
+                : <Redirect to="/login" />
+              }} />
+
+
             </Switch>
             <Footer />
           </React.Fragment>
