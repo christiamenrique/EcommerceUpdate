@@ -12,8 +12,6 @@ import httpClient from './components/user/httpClient'
 import LogIn from './components/user/LogIn'
 import LogOut from './components/user/LogOut'
 import SignUp from './components/user/SignUp'
-// import Add from './components/product/addProducts'
-// import axios from "axios";
 
 
 
@@ -26,6 +24,7 @@ class App extends React.Component {
       products: [],
       type: "null",
       price: true,
+      inCart: false,
     }
   }
 
@@ -112,7 +111,6 @@ class App extends React.Component {
                 ? <MainPage currentUser={this.state.currentUser} />
                 : <Redirect to="/login" />
               }} />
-
 
             </Switch>
             <Footer />

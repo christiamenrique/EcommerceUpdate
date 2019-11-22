@@ -18,7 +18,9 @@ function Product(props) {
           <h2>{product.product_name}</h2>
           <h3 className="price-modify">${product.price}</h3>
           <p>{product.product_description}</p>
-          <button type="button" className="btn btn-success">Buy Now</button>
+          <button type="button" className="btn btn-success">
+          <i className="fas fa-shopping-bag"></i> Add to Cart
+          </button>
         </div>
       </div>
     )
