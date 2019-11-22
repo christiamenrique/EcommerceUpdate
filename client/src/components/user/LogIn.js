@@ -1,6 +1,7 @@
 import React from 'react';
 import httpClient from './httpClient';
 import './logIn.scss';
+import { Link } from 'react-router-dom';
 
 class LogIn extends React.Component {
 	state = {
@@ -49,7 +50,8 @@ class LogIn extends React.Component {
 						value={password}
 					/>
 
-					<button className="btn btn-primary">Log In</button>
+					<button className="btn btn-primary btnSpace">Log In</button>
+					<Link to="/signup" className="btn btn-primary">Sign Up</Link>
 				</form>
 			</div>
 		)

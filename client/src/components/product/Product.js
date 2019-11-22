@@ -30,24 +30,24 @@ function Product(props) {
         {/* <input className="typeFilter" type="text" onChange={event => props.nameFilter(event)} placeholder="Search for names.." title="Type in a name" /> */}
 
         <select className="category" onChange={ e => props.dropboxChange(e)}>
-          <option value="Category">All Category</option>
-          <option value="processor">Processor</option>
-          <option value="watch">Watch</option>
-          <option value="play console">Play Console</option>
-          <option value="tv">TV</option>
+          <option value="Category">All Categories</option>
+          <option value="processor">Processors</option>
+          <option value="watch">Watches</option>
+          <option value="play console">Play Consoles</option>
+          <option value="tv">TVs</option>
           <option value="speakers">Speakers</option>
-          <option value="drone">Drone</option>
-          <option value="phone">Phone</option>
-          <option value="alarm">Smart Alarm</option>
-          <option value="computer">Computer</option>
+          <option value="drone">Drones</option>
+          <option value="phone">Phones</option>
+          <option value="alarm">Smart Alarms</option>
+          <option value="computer">Computers</option>
           <option value="headphone">EarBuds</option>
-          <option value="camera">Camera</option>
-          <option value="iPad">iPad</option>
+          <option value="camera">Cameras</option>
+          <option value="iPad">iPads</option>
         </select>
         <select className="priceRange" onChange={e => props.priceChange(e)}>
-          <option value="disable">Price Range</option>
-          <option value="lessthan400">Highest to lower</option>
-          <option value="morethan400">Lower to Highest</option>
+          <option value="morethan400">Price Range</option>
+          <option value="lessthan400">Lowest to Highest</option>
+          <option value="morethan400">Highest to lowest</option>
         </select>
       </form>
       {props.products.map(product => ProductsCard(product))

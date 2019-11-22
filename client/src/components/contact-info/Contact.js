@@ -71,7 +71,7 @@ render() {
     <React.Fragment>
       <Jumbal />
       <form onSubmit={this.onSubmit} className="cmxform form-dislpay">
-        <h2>Provide your personal info (won't be published) and add a comment with your feedback</h2>
+        <h2>Provide us with some information (don't worry, it won't be published), and leave a comment with your feedback or concern</h2>
         <fieldset>
           <div className="form-spacing">
             <label htmlFor="name">Full Name <mark className="requiredInput">*</mark></label>
@@ -107,7 +107,7 @@ render() {
             onChange={this.onChangePhoneNumber}/>
           </div>
           <div className="form-spacing">
-            <label htmlFor="comment">Your comment <mark className="requiredInput">*</mark></label>
+            <label htmlFor="comment">Comment <mark className="requiredInput">*</mark></label>
             <textarea 
             className="form-comment" 
             id="comments" 
@@ -118,7 +118,7 @@ render() {
             </textarea>
           </div>
           <div className="form-spacing">
-            <button type="submit" value="Create contact" className="btn btn-primary mb-2">submit</button>
+            <button type="submit" value="Create contact" className="btn btn-primary mb-2">Submit</button>
           </div>
         </fieldset>
       </form>

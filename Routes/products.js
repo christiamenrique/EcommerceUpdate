@@ -10,7 +10,7 @@ router.get('/:type/:price', async (req, res) => {
   const { type, price } = req.params
   const filter = type === "null" || type === "Category" ? {} : {typeOfproducts: type}
   const products = await Products.find(filter)
-  products.sort((a, b) => a.price < b.price)
+  products.sort((a, b) => a.price - b.price)
   price === "descend" && products.reverse()
   console.log(type)
   res.json(products)

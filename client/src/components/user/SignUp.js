@@ -1,6 +1,7 @@
 import React from 'react';
 import httpClient from './httpClient';
 import './signUp.scss';
+import { Link } from 'react-router-dom';
 
 // sign up form behaves almost identically to log in form. We could create a flexible Form component to use for both actions, but for now we'll separate the two:
 class SignUp extends React.Component {
@@ -84,7 +85,8 @@ class SignUp extends React.Component {
 					name="password"
 					required 
 					value={password} />
-					<button className="btn btn-primary">Sign Up</button>
+					<button className="btn btn-primary btnSpace">Sign Up</button>
+					<Link to="/login" className="btn btn-primary">Log In</Link>					
 				</form>
 			</div>
 		)
