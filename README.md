@@ -6,7 +6,7 @@ On this page, I am selling electronic products(tv, drones, speakers, etc..). I a
 
 # Installation
 * Open terminal.
-* git clone https://github.com/christiamenrique/new_react_ecom.git.
+* git clone https://github.com/christiamenrique/EcommerceUpdate.
 * Once is clone node.js is required to operate the page. You must use npm install.
 * Before starting the application you must create a mongo database.
 * Link to the mongoDb data in the inside .env.
@@ -24,12 +24,10 @@ On this page, I am selling electronic products(tv, drones, speakers, etc..). I a
 * Filter products	from low to high and high to low prices
 * Contact page that allows you to enter your name, phone number, email and comment
 * Contact page also has a jumbotron
-* All in the contact page has html
+* All input field has html validation
 * It has a api Routes, node server, morgan which is use to see the loggins
 * It has a design diagram which include the ERD (Entity Relationship Diagram)
  and FDD (functional decomposition diagram) of the application
-* It has the ecomDB which is the database that I'm using
-* It has a License and the test to make sure some API's works
 
 
 # Demo
