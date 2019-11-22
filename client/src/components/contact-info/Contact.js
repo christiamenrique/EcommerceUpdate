@@ -71,7 +71,7 @@ render() {
     <React.Fragment>
       <Jumbal />
       <form onSubmit={this.onSubmit} className="cmxform form-dislpay">
-        <h2>Provide us with some information (don't worry, it won't be published), and leave a comment with your feedback or concern</h2>
+        <h2>Provide us with some information (don't worry, it won't be published), and leave a comment with your feedback or concern!</h2>
         <fieldset>
           <div className="form-spacing">
             <label htmlFor="name">Full Name <mark className="requiredInput">*</mark></label>

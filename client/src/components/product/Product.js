@@ -34,7 +34,7 @@ function Product(props) {
           <option value="processor">Processors</option>
           <option value="watch">Watches</option>
           <option value="play console">Play Consoles</option>
-          <option value="tv">TVs</option>
+          <option value="tv">Televisions</option>
           <option value="speakers">Speakers</option>
           <option value="drone">Drones</option>
           <option value="phone">Phones</option>
