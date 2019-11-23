@@ -20,7 +20,7 @@ class Main extends React.Component {
                     <div className="carousel-item slide-2">
                         <div className="imgText">
                             <h2>Products</h2>
-                            <p>We have a variety of products including televitions, drones, speakers, and others. For more, go to our product page.</p>
+                            <p>We have a variety of products including televisions, drones, speakers, and others. For more, go to our product page.</p>
                         </div>
                     </div>
                     <div className="carousel-item slide-3">

@@ -14,7 +14,6 @@ import LogOut from './components/user/LogOut'
 import SignUp from './components/user/SignUp'
 
 
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -111,7 +110,6 @@ class App extends React.Component {
                 ? <MainPage currentUser={this.state.currentUser} />
                 : <Redirect to="/login" />
               }} />
-
             </Switch>
             <Footer />
           </React.Fragment>
