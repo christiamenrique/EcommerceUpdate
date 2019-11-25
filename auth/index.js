@@ -3,7 +3,7 @@ const User = require('../models/User.models')
 
 // Note this is the supper secret for signing the JWT
 // this should be acquired via .env or a microservice
-const JWT_SECRET = process.env.JWT_SECRET
+const JWT_SECRET  = 'thisismysecretkey'
 
 // function for creating tokens
 function signToken(user) {
