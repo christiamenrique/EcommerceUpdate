@@ -14,6 +14,12 @@ On this page, I am selling electronic products(tv, drones, speakers, etc..). I a
 * I also included the automated test which test the api's. The command to run this test is npm test.
 * To run the test mocha and chai are required. The command is npm install mocha, npm install chai.
 
+# .Env Example
+* PORT="5050"
+* ATLAS_URI="mongodb+srv://username:password@christiamhernandez-3yevw.mongodb.net/ecommerce?retryWrites=true&w=majority"
+* LOCAL_URI="mongodb://localhost/dbname"
+* JWT_SECRET="thisismysecretkey"
+
 # Features:
 * Signup and Login auth process, displaying ‘admin page’
 * Uses bcrypt encryption protocol and JWT
